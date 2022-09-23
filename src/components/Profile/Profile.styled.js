@@ -3,9 +3,9 @@ import styled from 'styled-components';
 export const ProfileCard = styled.article`
 width: 300px;
 text-align: center;
-  
-  box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
-    rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
+  margin-top: 50px;
+  background-color: #fff;
+
 `;
 
 export const Description = styled.div`
@@ -58,6 +58,6 @@ export const List = styled.li`
 width: 100%;
  border: 1px solid #d2d8d9; 
 gap: 5px;
-padding-top: 30px;
-padding-bottom: 30px;
+padding-top: 15px;
+padding-bottom: 15px;
 `;
