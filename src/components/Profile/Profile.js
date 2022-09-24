@@ -9,7 +9,7 @@ import {
 	Tag,
 	Username
 } from './Profile.styled';
-export const Profile = ({ user: { username, tag, location, avatar, stats: { followers, views, likes } } }) => {
+export const Profile = ({ username, tag, location, avatar, stats: { followers, views, likes } } ) => {
 	return (
 		<ProfileCard>
 			<Description>

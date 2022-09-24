@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 
 export const ProfileCard = styled.article`
-width: 300px;
+width: 400px;
 text-align: center;
-  margin-top: 50px;
+
   background-color: #fff;
+  
+  
 
 `;
 
@@ -40,6 +42,9 @@ export const Stats = styled.ul`
 display: flex;
 justify-content: center;
 background-color: #e6eaeb;
+padding: 0;
+margin: 0;
+
 
 
 `;
@@ -60,4 +65,10 @@ width: 100%;
 gap: 5px;
 padding-top: 15px;
 padding-bottom: 15px;
+border-radius: 10px;
+background: rgb(205 180 180) radial-gradient(circle at 50% 0, rgba(255,255,255,.65), rgba(255,255,255,.35));
+box-shadow:
+inset rgba(0,0,0,.6) 0 -3px 8px,
+inset rgba(252,255,255,.7) 0 3px 8px,
+rgba(0,0,0,.8) 0 3px 8px -3px;
 `;
