@@ -1,11 +1,8 @@
 import PropTypes from 'prop-types';
 import { TransactionHistoryItem } from '../../components/TransactionHistoryItem/TransactionHistoryItem';
 import {
-	TransactionHistoryTable,
-	TransactionHistoryThead,
-	TransactionHistoryTr,
-	TransactionHistoryTh,
-	TransactionHistoryTbody
+	TransactionHistoryTable, TransactionHistoryTbody, TransactionHistoryTh, TransactionHistoryThead,
+	TransactionHistoryTr
 } from './TransactionHistory.styled.js';
 
 export const TransactionHistory = ({ items }) => {
@@ -19,21 +16,24 @@ export const TransactionHistory = ({ items }) => {
 				</TransactionHistoryTr>
 			</TransactionHistoryThead>
 			<TransactionHistoryTbody>
-				
-			{
-				items.map(({ id, type, amount, currency }) => (
-					<TransactionHistoryItem
-						key={id}
-						type={type}
-						amount={amount}
-					currency={currency} />
-				))
-					}
-				
+
+				{
+					items.map(({ id, type, amount, currency }) => (
+						<TransactionHistoryItem
+							key={id}
+							type={type}
+							amount={amount}
+							currency={currency} />
+					))
+				}
+
 			</TransactionHistoryTbody>
-			</TransactionHistoryTable>
+		</TransactionHistoryTable>
 	);
 };
 TransactionHistory.propTypes = {
-	items: PropTypes.array.isRequired,
+	items: PropTypes.arrayOf(
+		PropTypes.shape({ id: PropTypes.string.isRequired, }),
+
+	),
 };
